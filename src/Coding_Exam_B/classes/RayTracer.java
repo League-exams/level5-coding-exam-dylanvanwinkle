@@ -1,10 +1,11 @@
 package Coding_Exam_B.classes;
+
 import java.awt.Color;
 
 public class RayTracer {
 
 	public static Color backgroundColor = new Color(0);
-	
+
 	public RayTracer(int width, int height, Camera camera) {
 		Color[][] pixels = new Color[width][height];
 		int hWidth = width / 2;
@@ -19,13 +20,13 @@ public class RayTracer {
 				framePixelPosition.add(camera.up.multiply(-hHeight).add(frameY));
 				framePixelPosition.add(camera.forward.multiply(camera.frameDistance));
 				Vector3 vecDir = Vector3.subtract(framePixelPosition, camera.position).normalize();
-				//TODO: Make a Ray class
+				// TODO: Make a Ray class
 			}
 		}
-		//TODO: Display the final image
+		// TODO: Display the final image
 	}
 
 	public static void main(String[] args) {
-		//TODO: Create a Scene
+		// TODO: Create a Scene
 	}
 }
